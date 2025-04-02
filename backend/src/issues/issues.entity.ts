@@ -4,6 +4,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
   CreateDateColumn,
+  DeleteDateColumn,
 } from 'typeorm';
 
 @Entity()
@@ -68,7 +69,7 @@ export class Issue {
   @UpdateDateColumn()
   modifiedDate: Date;
 
-  @Column({ nullable: true })
+  @DeleteDateColumn({ name: 'deletedDate' })
   deletedDate: Date;
 
   @Column({ nullable: true })
