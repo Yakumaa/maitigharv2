@@ -3,7 +3,6 @@ import { ConfigService } from '@nestjs/config';
 import { config } from 'dotenv';
 config();
 
-
 const configService = new ConfigService();
 
 export const dataSourceOptions: DataSourceOptions = {
@@ -19,7 +18,6 @@ export const dataSourceOptions: DataSourceOptions = {
   migrationsTableName: 'migrations_maitighar',
   migrations: ['src/database/migrations/*-migration.ts'],
 };
-
 
 const dataSource = new DataSource(dataSourceOptions);
 
